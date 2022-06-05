@@ -1,13 +1,15 @@
 import React from "react";
+import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 import { propTypes } from "react-bootstrap/esm/Image";
 
 export default function WeatherInfo(props) {
   return (
     <div className="WeahterInfo">
       <h1>{props.data.city}</h1>
-      <h4>Sunday, 17:40</h4>
+      <FormattedDate date={props.data.date} />
       <img src={process.env.PUBLIC_URL + `/${props.data.icon}.gif`} className="weatherIcon"/>
-      <div>{props.data.temperature}°</div>
+      <WeatherTemperature celsius={props.data.temperature} />
       <div>It's {props.data.description}!</div>
       <div className="row">
         <div className="col-6">
