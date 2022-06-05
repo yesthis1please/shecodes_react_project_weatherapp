@@ -37,6 +37,7 @@ export default function WeatherTemperature(props) {
   } else {
     return (
       <div className="WeatherTemperature">
+
         <span className="temperature">
           {Math.round((props.celsius * 9) / 5 + 32)}
         </span>
@@ -57,3 +58,5 @@ export default function WeatherTemperature(props) {
     );
   }
 }
+
+//link jumping on click?

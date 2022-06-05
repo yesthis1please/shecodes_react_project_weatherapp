@@ -1,0 +1,30 @@
+.WeatherInfo h1 {
+  font-size: 36px;
+  line-height: 1;
+  margin-top: 20px;
+}
+
+.WeatherInfo h4 {
+  font-size: 18px;
+}
+
+.WeatherInfo .weatherIcon {
+  display: block;
+  margin: 10px auto 30px;
+  width: 250px;
+}
+
+.WeatherInfo .description {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.WeatherInfo .humidityIcon {
+  width: 50px;
+}
+
+.WeatherInfo .windIcon {
+  width: 50px;
+}
+

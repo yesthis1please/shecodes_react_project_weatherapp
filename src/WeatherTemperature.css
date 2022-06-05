@@ -1,3 +1,16 @@
-.WeatherTemperature .unitIcon {
-    width: 25px;
+.WeatherTemperature {
+  margin: 20px auto 0;
+  width: 170px;
 }
+
+.WeatherTemperature .temperature {
+  font-size: 84px;
+  line-height: 0;
+}
+
+.WeatherTemperature .unitIcon {
+  width: 25px;
+  position: relative;
+  bottom: 8px;
+}
+
