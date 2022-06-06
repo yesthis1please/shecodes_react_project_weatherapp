@@ -14,7 +14,7 @@ export default function App() {
           <a
             href="https://www.linkedin.com/in/annamaria-bara/"
             target="_blank"
-            rel="noopener noreferrel"
+            rel="noopener noreferrer"
           >
             Annamaria Bara
           </a>{" "}
@@ -22,7 +22,7 @@ export default function App() {
           <a
             href="https://github.com/yesthis1please/shecodes_react_project_weatherapp"
             target="_blank"
-            rel="noopener noreferrel"
+            rel="noopener noreferrer"
           >
             open sourced on GitHub
           </a>
@@ -31,7 +31,7 @@ export default function App() {
           <a
             href="https://www.flaticon.com/free-animated-icons/sun"
             title="sun animated icons"
-            rel="noopener noreferrel"
+            rel="noopener noreferrer"
           >
             Freepik
           </a>{" "}
