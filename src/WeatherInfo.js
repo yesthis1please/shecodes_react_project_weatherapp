@@ -2,7 +2,6 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherTemperature from "./WeatherTemperature";
 
-
 import "./WeatherInfo.css";
 
 export default function WeatherInfo(props) {
@@ -13,6 +12,7 @@ export default function WeatherInfo(props) {
       <img
         src={process.env.PUBLIC_URL + `/${props.data.icon}.gif`}
         className="weatherIcon"
+        alt="weather icon"
       />
       <WeatherTemperature celsius={props.data.temperature} />
       <div className="description">It's {props.data.description}!</div>
@@ -25,7 +25,9 @@ export default function WeatherInfo(props) {
               alt="humidity icon"
             />
           </div>
-          <div className="row d-flex justify-content-center humidity">{props.data.humidity}%</div>
+          <div className="row d-flex justify-content-center humidity">
+            {props.data.humidity}%
+          </div>
         </div>
         <div className="col-6">
           <div className="row d-flex justify-content-center">
@@ -35,7 +37,9 @@ export default function WeatherInfo(props) {
               alt="wind icon"
             />
           </div>
-          <div className="row d-flex justify-content-center wind">{props.data.wind}km/h</div>
+          <div className="row d-flex justify-content-center wind">
+            {props.data.wind}km/h
+          </div>
         </div>
       </div>
     </div>
