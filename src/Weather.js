@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import "./Weather.css";
 
@@ -12,6 +13,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temperature: Math.round(response.data.main.temp),
@@ -43,23 +45,29 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-9">
-              <input
-                type="search"
-                placeholder="How's the weather in..."
-                autoFocus="on"
-                className="searchInput"
-                onChange={handleCityChange}
-              />
+        <div>
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-9">
+                <input
+                  type="search"
+                  placeholder="How's the weather in..."
+                  autoFocus="on"
+                  className="searchInput"
+                  onChange={handleCityChange}
+                />
+              </div>
+              <div className="col-3">
+                <input type="submit" value="Show me!" className="submitInput" />
+              </div>
             </div>
-            <div className="col-3">
-              <input type="submit" value="Show me!" className="submitInput" />
-            </div>
+          </form>
+          <WeatherInfo data={weatherData} />
+
+          <div className="mt-3">
+            <WeatherForecast coordinates={weatherData.coordinates} />
           </div>
-        </form>
-        <WeatherInfo data={weatherData} />
+        </div>
       </div>
     );
   } else {

@@ -11,7 +11,7 @@
 .WeatherInfo .weatherIcon {
   display: block;
   margin: 10px auto 30px;
-  width: 250px;
+  width: 150px;
 }
 
 .WeatherInfo .description {
