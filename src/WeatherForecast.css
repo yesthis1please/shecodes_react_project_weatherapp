@@ -1,4 +1,11 @@
 .WeatherForecast {
     text-align: center;
     border: 1px solid #58CDCC;
+    border-radius: 4px;
+    width: 400px;
+    margin: 0;
+}
+
+.WeatherForecast .col{
+    padding: 0;
 }

@@ -6,6 +6,7 @@
 
 .WeatherInfo h4 {
   font-size: 18px;
+  opacity: 0.7;
 }
 
 .WeatherInfo .weatherIcon {
@@ -18,6 +19,7 @@
   text-align: center;
   font-size: 24px;
   margin-bottom: 30px;
+  opacity: 0.7;
 }
 
 .WeatherInfo .humidityIcon {

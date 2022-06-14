@@ -1,0 +1,41 @@
+.Weather .searchInput {
+  font-size: 18px;
+  margin: 0 auto;
+  width: 400px;
+  height: 50px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #58cdcc;
+  border-radius: 4px;
+}
+
+::placeholder {
+  font-size: 18px;
+}
+
+.Weather button {
+  border: none;
+  background-color: transparent;
+}
+
+.Weather .buttonIcon {
+  width: 30px;
+  padding-top: 8px;
+}
+
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}

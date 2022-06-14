@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
+import { ThreeDots } from "react-loader-spinner";
 
 import "./Weather.css";
 
@@ -48,17 +49,25 @@ export default function Weather(props) {
         <div>
           <form onSubmit={handleSubmit}>
             <div className="row">
-              <div className="col-9">
+              <div className="col-10">
                 <input
                   type="search"
                   placeholder="How's the weather in..."
                   autoFocus="on"
+                  autoComplete="off"
+                  spellCheck="false"
                   className="searchInput"
                   onChange={handleCityChange}
                 />
               </div>
-              <div className="col-3">
-                <input type="submit" value="Show me!" className="submitInput" />
+              <div className="col">
+                <button>
+                  <img
+                    src={process.env.PUBLIC_URL + "search.png"}
+                    className="buttonIcon"
+                    alt="submit button"
+                  />
+                </button>
               </div>
             </div>
           </form>
@@ -72,6 +81,6 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Loading...";
+    return <ThreeDots color="#58cdcc" height={80} width={80} />;
   }
 }

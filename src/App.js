@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Weather from "./Weather";
 
 import "./App.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 export default function App() {
   return (
@@ -26,7 +27,7 @@ export default function App() {
           >
             open sourced on GitHub
           </a>
-          <br />
+          {" | "}
           Shout out to{" "}
           <a
             href="https://www.flaticon.com/free-animated-icons/sun"

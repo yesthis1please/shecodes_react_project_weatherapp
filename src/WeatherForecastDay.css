@@ -1,3 +1,8 @@
 .WeatherForecastDay-icon {
     width: 30px;
 }
+
+.WeatherForecastDay .WeatherForecastDay-temperature-min{
+    opacity: 0.7;
+    margin-left: 5px;
+}
